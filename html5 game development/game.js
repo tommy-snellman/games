@@ -3,17 +3,17 @@ var canvasBg = document.getElementById('canvasBg');
 var ctxBg = canvasBg.getContext('2d');
 
 var drawSquareBtn = document.getElementById('drawSquareBtn');
-drawSquareBtn.addEventListner('click', drawSquare, false);
+drawSquareBtn.addEventListener('click', drawSquare, false);
 
 
 var clearCanvasBtn = document.getElementById('clearCanvasBtn');
-clearCanvasBtn.addEventListner('click', clearCanvas, false);
+clearCanvasBtn.addEventListener('click', clearCanvas, false);
 
 function drawSquare() {
-	
+	ctxBg.fillStyle = '#505050';
+	ctxBg.fillRect(20, 100, 600, 600);
 }
 
-
 function clearCanvas() {
-	
+	ctxBg.clearRect(0, 0, 800, 500);
 }
