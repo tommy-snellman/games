@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>(DEV) Snake spelet</title>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+		document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+        $('#play-box').animate({
+            left: "-=5px",
+        }, 10)
+    	//alert("You pressed the left key!");
+        // left arrow
+    }
+    if (e.keyCode == '38') {
+        $('#play-box').animate({
+            top: "-=5px",
+        }, 10)
+    	//alert("You pressed the up key!");
+        // up arrow
+    }
+    else if(e.keyCode == '39') {
+        $('#play-box').animate({
+            left: "+=5px",
+        }, 10)
+    	//alert("You pressed the right key!");
+        //right arrow
+    }
+    else if (e.keyCode == '40') {
+        $('#play-box').animate({
+            top: "+=5px",
+        }, 10)
+    	//alert("You pressed the down key!");
+        // down arrow
+    }
+}
+	</script>
+
+<style type="text/css">
+    #play-field {
+        width: 500px;
+        height: 500px;
+        background-color: #c5ffa6;
+        margin-left: auto;
+        margin-right: auto;   
+     }
+
+    #play-box {
+        background: #121212;
+        width: 10px;
+        height: 10px;
+        position: relative;
+    }
+</style>
+
+</head>
+<body>
+    <div id="play-field">
+        <div id="play-box">
+
+        </div>
+    </div>
+</body>
+</html>
